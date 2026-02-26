@@ -1,0 +1,35 @@
+package oop;
+//Base class
+class Shape {
+ void draw() {
+     System.out.println("Drawing a Shape");
+ }
+}
+
+//Derived class Circle
+class Circle extends Shape {
+ void draw() {
+     System.out.println("Drawing a Circle");
+ }
+}
+
+//Derived class Rectangle
+class Rectangle extends Shape {
+ void draw() {
+     System.out.println("Drawing a Rectangle");
+ }
+}
+
+//Main class
+public class MethodOverridingDemo {
+ public static void main(String[] args) {
+
+     Shape s;
+
+     s = new Circle();
+     s.draw();
+
+     s = new Rectangle();
+     s.draw();
+ }
+}

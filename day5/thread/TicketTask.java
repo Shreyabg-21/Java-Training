@@ -1,0 +1,27 @@
+package oop.day5.thread;
+
+public class TicketTask implements Runnable {
+    String task;
+    TicketTask(String task) {
+        this.task = task;
+    }
+    public void run(){
+        System.out.println(task + "in progress.");
+    }
+
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new TicketTask("Seat Assignment "));
+        Thread t2 = new Thread(new TicketTask("Payment Processing "));
+        Thread t3 = new Thread(new TicketTask("SMS Notification "));
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
+/*
+ℹ️each runnable object is ajo , and the thread class is responsible only for execution, which makes this approach cleaner and flexible.
+⭐implements runnable
+better design
+interviewers mostly ask this
+supports multiple inheritance via interfaces
+ */

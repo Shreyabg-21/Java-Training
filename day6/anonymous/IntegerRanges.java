@@ -1,0 +1,14 @@
+package oop.day6.anonymous;
+
+public class IntegerRanges {
+    public static void main(String[] args) {
+        System.out.println("Integer Max value: " +
+                Integer.MAX_VALUE);
+        System.out.println("Integer Max value: " +
+                Integer.MIN_VALUE);
+        System.out.println("Max + 1: " +
+                (Integer.MAX_VALUE + 1));
+        System.out.println("Max - 1: " +
+                (Integer.MIN_VALUE - 1));
+    }
+}
